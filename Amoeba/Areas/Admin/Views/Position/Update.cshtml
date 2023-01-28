@@ -1,0 +1,32 @@
+﻿
+
+
+@model Position
+
+
+
+<div class="container pt-5 pb-5">
+
+    <div class="container">
+        <h1 style="text-align:center">Update Positions</h1>
+    </div>
+
+    <div>
+
+
+        <form method="post">
+            
+            <div class="form-group">
+                <label asp-for="Name">FullName</label>
+                <input asp-for="Name" class="form-control"  placeholder="Password">
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+           
+            <button type="submit" class="btn btn-primary">Update</button>
+            <a class="btn btn-danger" asp-action="index" asp-controller="position">Cancel</a>
+        </form>
+
+
+    </div>
+</div>
+
