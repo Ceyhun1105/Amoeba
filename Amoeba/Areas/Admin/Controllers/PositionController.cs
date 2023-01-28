@@ -1,11 +1,13 @@
 ﻿using Amoeba.DBContextFIles;
 using Amoeba.Helpers;
 using Amoeba.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Amoeba.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class PositionController : Controller
     {
         private readonly AppDbContext _context;

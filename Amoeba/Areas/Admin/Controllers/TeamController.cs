@@ -1,12 +1,14 @@
 ﻿using Amoeba.DBContextFIles;
 using Amoeba.Helpers;
 using Amoeba.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Amoeba.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class TeamController : Controller
     {
         private readonly AppDbContext _context;
